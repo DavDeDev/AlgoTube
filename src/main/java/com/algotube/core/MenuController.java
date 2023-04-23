@@ -1,9 +1,8 @@
 package com.algotube.core;
 
+import com.algotube.gui.MainApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
@@ -29,9 +28,7 @@ public class MenuController {
     }
 
     public void onSortBtnClicked(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("tabs/sorting.fxml"));
-        Parent newPage = loader.load();
-        root.getChildren().setAll(newPage);
+        MainApplication.change_pane("sorting-view.fxml");
 
     }
 }
