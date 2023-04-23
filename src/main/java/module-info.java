@@ -4,7 +4,8 @@ module com.algotube.algotube {
 
 
     opens com.algotube.gui to javafx.fxml;
-    exports com.algotube.gui;
-    exports com.algotube.core;
-    opens com.algotube.core to javafx.fxml;
+    exports com.algotube.controllers;
+    opens com.algotube.controllers to javafx.fxml;
+    exports com.algotube;
+    opens com.algotube to javafx.fxml;
 }

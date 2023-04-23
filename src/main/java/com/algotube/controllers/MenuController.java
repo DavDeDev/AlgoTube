@@ -1,6 +1,6 @@
-package com.algotube.core;
+package com.algotube.controllers;
 
-import com.algotube.gui.MainApplication;
+import com.algotube.MainApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

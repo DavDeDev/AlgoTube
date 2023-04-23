@@ -1,4 +1,4 @@
-package com.algotube.gui;
+package com.algotube;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -45,11 +45,12 @@ public class MainApplication extends Application {
                 e.printStackTrace();
             }
         }
-        root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("root.fxml")));
+        root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/algotube/gui/root.fxml")));
         root.getChildren().add(pages.get("menu-view.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("AlgoTube");
         stage.setScene(scene);
+
         stage.show();
 
 
@@ -63,6 +64,8 @@ public class MainApplication extends Application {
     public static void change_pane(String fxml) {
         root.getChildren().clear();
         root.getChildren().add(pages.get(fxml));
+        Stage stage = (Stage) root.getScene().getWindow();
+        stage.setTitle("New Title"); // change the title here
     }
 
     public static void main(String[] args) {

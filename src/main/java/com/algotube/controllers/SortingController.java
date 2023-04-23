@@ -1,4 +1,4 @@
-package com.algotube.core;
+package com.algotube.controllers;
 
 /**
  * @author : David
